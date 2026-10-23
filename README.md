@@ -49,10 +49,15 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-Install dependencies (root combined requirements, or per-task):
+Install dependencies:
 
 ```bash
+# Option A: Install all dependencies from root
 pip install -r requirements.txt
+
+# Option B: Or install individually per task
+pip install -r task-1-rag-pdf-chatbot/requirements.txt
+pip install -r task-2-data-extraction-bot/requirements.txt
 ```
 
 ### 2. Primary Engine vs. Offline Testing Mode
