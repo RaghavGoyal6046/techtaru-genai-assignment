@@ -1,0 +1,19 @@
+INVOICE #INV-2026-9041
+Date: 2026-10-15
+
+Vendor:
+TechTaru Digital Solutions Pvt Ltd
+Cyber City, Tower B, Gurugram, India
+
+Bill To:
+Acme Cloud Innovations Inc
+San Francisco, CA, USA
+
+Itemized Breakdown:
+1. Enterprise Generative AI Consulting Services - Qty: 1 - Unit Price: $3,500.00 - Total: $3,500.00
+2. Custom ChromaDB Vector Store Architecture - Qty: 1 - Unit Price: $1,200.00 - Total: $1,200.00
+
+Subtotal: $4,700.00
+Tax (10% GST/VAT): $470.00
+Total Amount Due: $5,170.00
+Payment Terms: Net 30 days via Wire Transfer.

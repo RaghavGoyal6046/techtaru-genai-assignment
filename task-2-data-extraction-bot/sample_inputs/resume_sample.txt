@@ -1,0 +1,13 @@
+Raghav Goyal
+raghavgoyal6046@gmail.com
++91 98765 43210
+Jaipur, Rajasthan, India
+
+Summary:
+Generative AI Engineer and Python developer with 3.5 years of experience building production-grade LLM applications, RAG pipelines with ChromaDB, and high-performance REST APIs using FastAPI and Pydantic.
+
+Technical Skills:
+Python, FastAPI, LangChain, ChromaDB, Docker, PostgreSQL, AWS, Git, Machine Learning, PyTorch, Pydantic.
+
+Education:
+Bachelor of Technology (B.Tech) in Computer Science, Rajasthan Technical University.
