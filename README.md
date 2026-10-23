@@ -49,28 +49,29 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-Install dependencies for both tasks:
+Install dependencies (root combined requirements, or per-task):
 
 ```bash
-pip install -r task-1-rag-pdf-chatbot/requirements.txt
-pip install -r task-2-data-extraction-bot/requirements.txt
+pip install -r requirements.txt
 ```
 
-### 2. API Key Configuration
+### 2. Primary Engine vs. Offline Testing Mode
 
-Both tasks use Google Gemini (`gemini-3.5-flash`). Both also include an offline mock/heuristic mode so they can be run and tested without an API key if needed.
+- **Primary Production Engine (Google Gemini):**
+  Uses `gemini-3.5-flash` for answering and structured extraction, paired with `gemini-embedding-001` for vector embeddings.
+  Configure your key in both `.env` files:
+  ```bash
+  cp task-1-rag-pdf-chatbot/.env.example task-1-rag-pdf-chatbot/.env
+  cp task-2-data-extraction-bot/.env.example task-2-data-extraction-bot/.env
+  ```
+  Add your API key:
+  ```env
+  GEMINI_API_KEY=your_gemini_api_key
+  ```
+  *(Free tier keys can be obtained at [Google AI Studio](https://aistudio.google.com/app/apikey)).*
 
-Create `.env` files from the provided examples:
-
-```bash
-cp task-1-rag-pdf-chatbot/.env.example task-1-rag-pdf-chatbot/.env
-cp task-2-data-extraction-bot/.env.example task-2-data-extraction-bot/.env
-```
-
-Add your Gemini API key in both `.env` files:
-```env
-GEMINI_API_KEY=your_gemini_api_key
-```
+- **Offline / Mock Mode:**
+  Included for local test execution, offline evaluation, and CI/CD without requiring external credentials. In Task 1, it uses deterministic token-hashing to demonstrate vector retrieval logic. In Task 2, it uses regex heuristic extraction. For complete generative semantic capabilities, running in Gemini mode is recommended.
 
 ---
 

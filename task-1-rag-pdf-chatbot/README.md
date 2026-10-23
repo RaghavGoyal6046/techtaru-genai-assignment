@@ -10,7 +10,7 @@ An interactive document question-answering application built with Streamlit, Lan
 - **Source Citations:** Retrieved answers include references to specific pages with similarity scores.
 - **Relevance Guardrail:** Out-of-scope questions that exceed the distance threshold (> 0.82) return a clean fallback response without making unnecessary LLM calls.
 - **Vector Math Explainer:** Includes an interactive comparison tab and standalone script (`vector_math.py`) demonstrating Cosine Similarity vs. Euclidean Distance.
-- **Offline Mock Fallback:** Can run in mock mode without API keys for testing.
+- **Offline Mock Fallback:** Supports an offline mode with deterministic token-hashing for automated unit testing (CI/CD) and fast local evaluation without external API dependencies.
 
 ## Vector Search Math: Cosine vs. Euclidean
 
@@ -38,7 +38,8 @@ python vector_math.py
 2. **Configure environment:**
    ```bash
    cp .env.example .env
-   # Add your GEMINI_API_KEY to .env (or leave blank to use mock mode)
+   # Add your GEMINI_API_KEY for live Gemini generation & semantic embeddings.
+   # If left blank, the app runs in offline mock mode for test verification.
    ```
 
 3. **Run the Streamlit app:**
